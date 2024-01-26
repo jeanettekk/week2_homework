@@ -18,10 +18,13 @@ y0 = 1
 # The variable 'y0' stores the height of the barrel from which the projectile is launched in meters
 
 a = g * x**2
-b = 2 * (v0 * cos(theta))**2
-c = x * tan(theta)
-# The a, b and c variables store immediate results for simplifying the final calculation
 # Used **2 to square a numeric value
+b = 2 * (v0 * cos(theta))**2
+# The cos() function returns the cosine of the angle 'theta'
+c = x * tan(theta)
+# The tan() function returns the tangent of the angle 'theta'
+# The a, b and c variables store immediate results for simplifying the final calculation
+
 
 proj_height = y0 + c - (a / b)
 # The variable 'proj_height' stores the calculated height of the projectile
