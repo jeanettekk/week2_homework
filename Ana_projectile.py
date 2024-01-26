@@ -1,4 +1,5 @@
 # Importing math library
+# week 2 homework part 3
 import math
 
 # Assigning given barrel height to variable and printing it

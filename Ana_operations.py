@@ -1,3 +1,4 @@
+# week 2 homework part 2
 # Following statement asks for user input and assigns it to variable
 user_string = input("Please enter an alphanumeric value: ")
 

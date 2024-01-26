@@ -1,3 +1,4 @@
+# week 2 homework part 1
 # Following two statements initialize two variables with strings
 first_name = "Anagha"
 last_name = "Jawalekar"
