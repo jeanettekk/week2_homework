@@ -4,7 +4,7 @@ import os
 import glob
 # Imports glob module, a standard library module, to use the glob() function
 
-home_path = os.environ.get ('HOME')
+home_path = os.environ.get('HOME')
 # os.environ is a dictionary-like object containing key-value pairs for system information
 # The HOME environment variable stores the user's home directory
 # The get() method retrieves the value of the HOME environment variable
@@ -39,7 +39,7 @@ for file_path in matching_files:
     # Get the size of the current file and store it in file_size variable
 
     if file_size > 0:
-    # If file_size is greater than 0
+        # If file_size is greater than 0
 
         print(os.path.basename(file_path), 'Size:', file_size, 'bytes')
         # As loop iterates, each file_path and file_size will be printed if the size is greater than 0
