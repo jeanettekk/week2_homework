@@ -1,4 +1,5 @@
-# week 2 homework part 3
+# week 2 homework Exercise 9 part 3
+# This program does some complex math to calculate height of a projectile fired from a gun
 
 # Importing math library
 import math

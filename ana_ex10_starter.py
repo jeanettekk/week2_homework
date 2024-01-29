@@ -1,4 +1,8 @@
-# importing three modules in separate statements to optimize imports
+# week 2 homework Exercise 10 part 1
+# This program picks the path of home directory (hdir) and checks for number of files and their lengths
+# and prints names and sizes of all files. Also, separately prints the names of only non-zero files
+
+# importing modules to be able to access the file system in computer and to perform required checks
 import glob
 import os
 import sys
@@ -13,7 +17,7 @@ if sys.platform == 'win32':
 else:
     hdir = os.environ['HOME']
 
-# print("\n", hdir)
+# print("\n", hdir) used this line for debugging
 
 # Construct a portable wildcard pattern
 # Join the home directory path to the names of all contained files

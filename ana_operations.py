@@ -1,4 +1,6 @@
-# week 2 homework part 2
+# week 2 homework Exercise 9 part 2
+
+# This program asks for user input and performs some string operations on it
 
 # Following statement asks for user input and assigns it to variable
 user_string = input("\n Please enter an alphanumeric value: ")

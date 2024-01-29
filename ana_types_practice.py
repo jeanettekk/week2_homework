@@ -1,4 +1,6 @@
-# week 2 homework part 1
+# week 2 homework Exercise 9 part 1
+
+# This program uses strings, list and dictionary to store first and last names and then prints full name
 
 # Following two statements initialize two variables with strings
 first_name = "Anagha"
@@ -17,11 +19,22 @@ print("\n", full_name)
 # Following statement assigns list values to variable full_name
 full_name = [first_name, last_name]
 
-# Following statement prints the two values in the list
+# Following statement prints the two values stored in the list full_name
 print("\n", full_name[0], full_name[1])
 
-# trying to see what the following statement will print
+# Following statement concatenated strings from list full_name with space in-between
+# before printing the combined string
 print("\n", full_name[0] + " " + full_name[1])
-# Above statement printed the first_name and last_name strings with space in-between
+
+# Storing key and value pairs for first and last names in dictionary variable full_name
+full_name = {'name': first_name, 'surname': last_name}
+
+# the values() method returns values (without keys) from dictionary and the join() method
+# joins values from any list together with a character in-between (in this case a white space)
+print('\n' + ' '.join(full_name.values()))
+
+
+
+
 
 
