@@ -27,4 +27,8 @@ full_name_dict = {'first': first_name, 'last': last_name}
 # Print function outputs the keys and values in the dictionary, full_name_dict
 print('\n', full_name_dict)
 
+# the values() method returns values (without keys) from dictionary and the join() method
+# joins values from any list together with a character in-between (in this case a white space)
+print('\n' + ' '.join(full_name_dict.values()))
+
 
