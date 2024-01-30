@@ -36,40 +36,45 @@ correct_pin = 2906
 # The security_answer variable stores the correct answer to the security question.
 security_answer = 'fluffy'
 
-# A function was created because this block of code needs to be called twice.
-# def defines a function called pin_reset with the parameter, attempts_parameter
+
+# function pin_reset was created because this block of code needs to be called twice.
+# def defines a function called pin_reset with three parameters
 # The pin_reset function will be used to reset correct_pin if the security question is answered correctly
-def pin_reset(attempts_parameter):
-    # if the argument called in the attempts_parameter variable is equal to 0, execute the next code.
+def pin_reset(attempts_parameter, correct_pin_parameter, security_parameter):
+
+    # if the argument called in attempts_parameter is equal to 0, execute the next code.
     if attempts_parameter == 0:
 
-        # Prints a string to inform the user of failed attempts and ask their security question.
+        # Prints a string to inform the user of failed attempts and ask the security question.
         print('All attempts failed. Reset pin by answering this security question.\nWhat is your first pet\'s name?')
 
         # input() function requests an answer and stores it as a string in the user_answer variable
         user_answer = input('Enter answer here: ')
 
         # if the strings in security_answer is the same as user_answer, execute the next code.
-        if security_answer == user_answer:
-
-            # global indicates variables are global variables, belonging to the global scope.
-            # Declaring global means, use these global variables instead of creating new local variables
-            global correct_pin
-            global pin_attempts
+        if security_parameter == user_answer:
 
             # getpass.getpass() function securely takes the input of a new pin without displaying it on screen.
-            # int() function converts the input string into and integer.
-            # The new pin is stored in the global variable, correct_pin.
-            correct_pin = int(getpass.getpass('Enter NEW pin: '))
+            # int() function converts the input string into an integer.
+            # The new pin is stored in the variable, new_pin.
+            new_pin = int(getpass.getpass('Enter NEW pin: '))
 
-            # Add 3 to pin_attempts value and store the new value in that variable.
+            # Add 3 to attempts_parameter and store the new value in new_attempts.
             # This wil reset the max pin attempts and allow the user to try again with their new pin.
-            pin_attempts += 3
+            new_attempts = attempts_parameter + 3
+
+            # return is used to return two values, an immutable tuple, from this function
+            # These values will be used in the variables, correct_pin and pin_attempts later
+            return new_pin, new_attempts
 
         # if the strings in security_answer and user_answer are NOT the same, execute the next code.
         else:
             # Informs the user that security is being called due to suspicious activity
             print('Answer incorrect: Calling security...')
+
+    # Returns the existing values if the reset condition is not met
+    return correct_pin_parameter, attempts_parameter
+
 
 # The while loop will keep executing this block of code until the pin_attempts variable is 0
 while pin_attempts > 0:
@@ -105,8 +110,8 @@ while pin_attempts > 0:
             # Prints a string and integer to inform the user how many digits is required and pin attempts left.
             print('Pin needs to be 4 digits. You have', pin_attempts, 'attempts left')
 
-            # Calls the function pin_reset and uses the value of pin_attempts as an argument
-            pin_reset(pin_attempts)
+            # Calls the function pin_reset and unpacks the returned values in correct_pin and pin_attempts
+            correct_pin, pin_attempts = pin_reset(pin_attempts, correct_pin, security_answer)
 
         # if either of the previous if statements are NOT True, execute the next code
         else:
@@ -116,5 +121,5 @@ while pin_attempts > 0:
             # Prints a string to indicate the user input the wrong pin and how many attempts left.
             print('Incorrect pin. You have', pin_attempts, 'attempts left')
 
-            # Calls the function pin_reset and uses the value of pin_attempts as an argument
-            pin_reset(pin_attempts)
+            # Calls the function pin_reset and unpacks the returned values in correct_pin and pin_attempts
+            correct_pin, pin_attempts = pin_reset(pin_attempts, correct_pin, security_answer)
