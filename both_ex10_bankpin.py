@@ -1,12 +1,11 @@
-# Week 2 homework: Exercise 10 Part 3
-
+# Week 2 homework: Exercise 10, Parts 2 and 3
 # importing getpass package to access getpass module inside it which hides user input (shows blank)
 import getpass
 
 # hardcode correct value of user PIN
 pin = '7860'
 
-# Getting user PIN in first for loop by using getpass module from getpass package masking user pin with blank
+# Getting user PIN in for loop by using getpass module from getpass package and masking user pin with blank
 
 # iterative loop runs three times, from value of integer attempt_getpass = 1 to attempt_getpass =3 (excludes 4)
 for attempt_getpass in range(1, 4):
@@ -25,7 +24,8 @@ for attempt_getpass in range(1, 4):
         if attempt_getpass == 3:
             print("Your PIN is now blocked!")
 
-print('2nd Version: Using a while loop')
+# Another way of achieving the same goals by using while loop instead
+print('\n2nd Version: Using a while loop')
 
 # The pin_attempts variable stores the max number of pin attempts
 pin_attempts = 3
@@ -40,7 +40,7 @@ security_answer = 'fluffy'
 # def defines a function called pin_reset with the parameter, attempts_parameter
 # The pin_reset function will be used to reset correct_pin if the security question is answered correctly
 def pin_reset(attempts_parameter):
-    # if the argument called in the attempts_parameter variable is equal to 0, execute the next code.
+    # if the argument passed in the attempts_parameter variable is equal to 0, execute the next code.
     if attempts_parameter == 0:
 
         # Prints a string to inform the user of failed attempts and ask their security question.
@@ -70,6 +70,7 @@ def pin_reset(attempts_parameter):
         else:
             # Informs the user that security is being called due to suspicious activity
             print('Answer incorrect: Calling security...')
+
 
 # The while loop will keep executing this block of code until the pin_attempts variable is 0
 while pin_attempts > 0:

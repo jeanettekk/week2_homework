@@ -1,4 +1,5 @@
-# week 2 homework part 2
+# week 2 homework Exercise 9 part 2
+# This program asks for user input and performs some string operations on it
 
 # Following statement asks for user input and assigns it to variable
 user_string = input("Please enter an alphanumeric value: ")
@@ -33,7 +34,8 @@ print("\n Your input contains all numeric characters: " + true_or_false)
 
 # Created the dictionary, results_dict, to store the outcomes of the methods and functions
 # Keys, 'uppercase', 'number_of_characters' and 'numeric_characters', are associated with these outputs
-results_dict = {'uppercase': user_string.upper(),'number_of_characters': len(user_string), 'all_numeric_characters': user_string.isdecimal()}
+results_dict = {'uppercase': user_string.upper(), 'number_of_characters': len(user_string),
+                'all_numeric_characters': user_string.isdecimal()}
 
-print(results_dict)
 # Print function outputs the dictionary, results_dict
+print(results_dict)

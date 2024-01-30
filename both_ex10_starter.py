@@ -1,7 +1,10 @@
-# importing three modules in separate statements to optimize imports
-# Imports os module to use functions/methods that interact with the operating system
-# Imports glob module, a standard library module, to use the glob() function
-# Imports sys module,
+# homework week 2: Exercise 10 part 1
+# This program picks the path of home directory (hdir) and checks for number of files and their lengths
+# and prints names and sizes of all files. Also, separately prints the names of only non-zero files
+
+# Imports: glob module helps in finding all the path names matching a pattern
+# os module provides a way to interact with the operating system. And the sys module
+# provides access to variables and functions that interact with python interpreter
 import glob
 import os
 import sys
