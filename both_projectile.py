@@ -1,27 +1,25 @@
-# week 2 homework part 3
+# week 2 homework Exercise 9 part 3
+# This program does some complex math to calculate height of a projectile fired from a gun
 
-# Math module provides functions for calculations
+# Math module provides calculations like tan and cos of theta
 import math
 
-# Imported pi (math constant), tan (function), and cos (function) from the math module
-# from math import pi, tan, cos
-
-# Assigning given barrel height to variable and printing it
+# Assigning given barrel height to variable
 yb = 1
 
-# Assigning given horizontal_distance to variable and printing it
+# Assigning given horizontal_distance to variable
 x = 0.5
 
-#  Assigning given elevation in degree to variable and printing it
+#  Assigning given elevation in degree to variable
 deg = 80
 
-# Calculating elevation in radian and printing it by converting into string and concatenating to message
+# Calculating elevation in radian by converting degree into radian
 theta = deg * 22 / (7 * 180)
 
 # The variable 'g' stores the acceleration due to gravity, a float
 g = 9.81
 
-# Assigning to variable and printing initial velocity
+# Assigning value of initial velocity to variable vi
 vi = 44
 
 # Printing formula for the height of projectile
@@ -32,7 +30,10 @@ print("\n Formula version1: Height of Projectile, yp = "
 yp = yb + (x * math.tan(theta)) - ((g * x * x)/(2 * (vi * math.cos(theta)) * (vi * math.cos(theta))))
 
 # Printing the result after converting into string to join with left hand side string
-print("\n Therefore, height of projectile, yp = " + str(yp))
+print("\n Therefore, height of projectile, yp = " + str(yp) + ' units')
+
+
+# Another approach to find out the height of projectile
 
 # Used **2 to square a numeric value
 a = g * x**2
