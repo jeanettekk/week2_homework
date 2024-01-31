@@ -4,12 +4,13 @@ pin = '7860'
 
 def pin_reset():
     # variable is assigned predefined value of Mother's maiden name, variable 'attempts' is initialized as 0
-    # and new_pin is assigned value from outer scope variable 'pin'
+    # new_pin is assigned value from outer scope variable 'pin', boolean done is initialized as False and
+    # reset_trials keeps count of how many times the confirming password has mismatched it is initialized as 0
     mm_name = 'Shree'
     attempts = 0
     new_pin = pin
     done = False
-    reset_trials = 1
+    reset_trials = 0
     # informs user that their pin is blocked, and they should answer security question to reset it
     print('PIN blocked. \nAnswer security question to reset PIN: What is your mother\'s maiden name?')
     # the getpass() method discreetly gets answer to security question from user
@@ -24,7 +25,7 @@ def pin_reset():
                 print("PIN successfully changed.")
                 attempts = 3
                 done = True
-            elif reset_trials == 4:
+            elif reset_trials == 3:
                 done = True
                 print("Too many failed attempts. Contact customer service.")
     return new_pin, attempts
