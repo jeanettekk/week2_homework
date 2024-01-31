@@ -9,6 +9,7 @@ def pin_reset():
     attempts = 0
     new_pin = pin
     done = False
+    reset_trials = 1
     # informs user that their pin is blocked, and they should answer security question to reset it
     print('PIN blocked. \nAnswer security question to reset PIN: What is your mother\'s maiden name?')
     # the getpass() method discreetly gets answer to security question from user
@@ -18,12 +19,14 @@ def pin_reset():
         while not done:
             new_pin = getpass.getpass("Enter new PIN: ", stream=None)
             confirm_pwd = getpass.getpass("Confirm new PIN: ", stream=None)
+            reset_trials += 1
             if confirm_pwd == new_pin:
                 print("PIN successfully changed.")
                 attempts = 3
                 done = True
-    else:
-        print("PIN BLOCKED")
+            elif reset_trials == 4:
+                done = True
+                print("Too many failed attempts. Contact customer service.")
     return new_pin, attempts
 
 
