@@ -3,8 +3,8 @@ import getpass
 pin = '7860'
 
 def pin_reset():
-    # variable is assigned predefined value of Mother's maiden name, attempts is initialized as 0
-    # and new_pin is same as global variable pin
+    # variable is assigned predefined value of Mother's maiden name, variable 'attempts' is initialized as 0
+    # and new_pin is assigned value from outer scope variable 'pin'
     mm_name = 'Shree'
     attempts = 0
     new_pin = pin
